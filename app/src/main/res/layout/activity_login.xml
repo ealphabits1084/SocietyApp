@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="chemicalDetails"
+            type="com.example.societyapp.LoginActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/iv_logo_background"
+            android:layout_width="@dimen/dimen_103dp"
+            android:layout_height="@dimen/dimen_103dp"
+            android:layout_marginTop="@dimen/dimen_40dp"
+            android:background="@drawable/circle_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/dimen_54dp"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_marginStart="@dimen/dimen_30dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/text_size_30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_logo_background"
+            app:srcCompat="@drawable/ic_buildings" />
+
+        <TextView
+            android:id="@+id/iv_logo_text"
+            android:layout_width="@dimen/dimen_32dp"
+            android:layout_height="@dimen/dimen_19dp"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:text="@string/logo"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_36dp"
+            android:text="@string/enter_mobile_number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_logo_background" />
+
+        <EditText
+            android:id="@+id/et_mobile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="@string/et_phone_no_hint"
+            android:inputType="phone"
+            android:maxLength="15"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_otp_instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:lines="2"
+            android:text="@string/otp_instruction"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_mobile_number"
+            tools:ignore="MissingConstraints" />
+
+
+        <Button
+            android:id="@+id/btn_get_otp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_52dp"
+            android:layout_marginStart="@dimen/dimen_17dp"
+            android:layout_marginEnd="@dimen/dimen_17dp"
+            android:layout_marginBottom="@dimen/dimen_14dp"
+            android:background="@drawable/button_background"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/get_otp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_reg_new_ac"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SpUsage" />
+
+        <Button
+            android:id="@+id/btn_reg_new_ac"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_52dp"
+            android:layout_marginStart="@dimen/dimen_17dp"
+            android:layout_marginEnd="@dimen/dimen_17dp"
+            android:layout_marginBottom="@dimen/dimen_94dp"
+            android:background="@drawable/button_background_black"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/register_new_account"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints,SpUsage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
